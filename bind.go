@@ -21,7 +21,7 @@ const (
 // BindType returns the bindtype for a given database given a drivername.
 func BindType(driverName string) int {
 	
-	driverName = strings.TrimSuffix("-instrumented", driverName)
+	driverName = strings.TrimSuffix(driverName, "-instrumented") 
 	
 	switch driverName {
 	case "postgres", "pgx":
